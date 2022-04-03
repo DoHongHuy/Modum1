@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        button {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><label for="">Tiếng Anh</label><input type="text" name="" id="english"></p>
+        <p><label for="">Tiếng Việt</label><input type="text" name="" id="vietnammese" disabled></p>
+        <button onclick="Show()" type="button">Dịch</button>
+    </div>
+    <script>   
+        function Show(){
+            let english = ["hello","my","you"];
+            let vietnammese = ["xin chào","tôi","bạn"];
+            let TranslateES = document.getElementById("english").value;
+            let TranslateTV = document.getElementById("vietnammese");
+            for(let i = 0; i < english.length ; i++){
+                if(TranslateES == english[i]){
+                    flag = 1;
+                    result = i;
+                }
+            }
+            if(flag == 1){
+                TranslateTV.value = vietnammese[result];
+            }else {
+                alert("Từ này không có trong từ điển");
+            }
+        }
+    </script>
+</body>
+</html>tml>

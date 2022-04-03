@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label>Amount</label> <br />
+      <input type="text" id="idAmount" value="" />
+      <labelHe>From</label>
+      <select name=" From " id="idFrom">
+        <option value="usd">USD</option>
+        <option value="vnd">Vnd</option>
+      </select>
+      <label>To</label>
+      <select name="To" id="idTo">
+        <option value="vnd">Vnd</option>
+        <option value="usd">USD</option>
+      </select>
+      <button type="button" onclick="converAmount()">Convert</button>
+    </form>
+  </body>
+  <script>
+    var amount = document.getElementById("idAmount").value;
+    console.log(amount);
+    function converAmount() {
+        var from = document.getElementById("idFrom").value;
+        var to = document.getElementById("idTo").value;
+        var amount = document.getElementById("idAmount").value;
+        console.log(from + "-->"+ to);
+        if(from=='usd' && to=='vnd'){
+        amount = amount*23000;
+        alert("số tiền la: " + amount);
+        }
+        if(from=='usd' && to=='usd'){
+            amount=amount;
+            alert("Số tiền là: " + amount);
+        }
+        if(from=='vnd' && to=='usd'){
+            amount = amount/23000;
+            alert("Số tiền là: " + amount);
+        }
+        if(from=='vnd' && to=='vnd'){
+            amount = amount;
+            alert("Số tiền la: " + amount);
+        }
+    }
+  </script>
+</html>

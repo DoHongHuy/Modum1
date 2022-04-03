@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Caculator</h1>
+    <input type="text" id="idgiatriA" value="2" />
+    <input type="text" id="idgiatriB" value="5" /> <br />
+    <button type="button" onclick="tinhtong()">Addition(+)</button>
+    <button type="button" onclick="tinhhieu()">Subtraction(-)</button>
+    <button type="button" onclick="tinhnhan()">Multiplication(*)</button>
+    <button type="button" onclick="tinhchia()">Division(/)</button>
+
+  </body>
+  <script>
+    function tinhtongAB(a, b) {
+      return a + b;
+    }
+    function tinhtong() {
+      var a = document.getElementById("idgiatriA").value;
+      var b = document.getElementById("idgiatriB").value;
+      //var tong = parseInt(a) + parseInt(b);
+      var tong = tinhtongAB(parseInt(a), parseInt(b));
+      alert("tong bang: " + tong);
+    }
+    function tinhhieuAB(a, b) {
+      return a - b;
+    }
+    function tinhhieu() {
+      var a = document.getElementById("idgiatriA").value;
+      var b = document.getElementById("idgiatriB").value;
+      var hieu = tinhhieuAB(parseInt(a), parseInt(b));
+      alert("tong bang: " + hieu);
+    }
+    function tinhnhanAB(a, b) {
+      return a * b;
+    }
+    function tinhnhan() {
+      var a = document.getElementById("idgiatriA").value;
+      var b = document.getElementById("idgiatriB").value;
+      var nhan  = tinhnhanAB(parseInt(a), parseInt(b));
+      alert("bằng"+nhan );
+    }
+    function tinhchiaAB(a, b) {
+      return a / b;
+    }
+    function tinhchia() {
+      var a = document.getElementById("idgiatriA").value;
+      var b = document.getElementById("idgiatriB").value;
+      var chia = tinhchiaAB(parseInt(a), parseInt(b));
+      alert("tong bang: " + chia);
+    }
+    
+  </script>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        font-size: 100%;
+        font-weight: 300px;
+    }
+ .btn{
+     flex-grow: 1;
+     margin: 5px;
+     font-size: 5em;
+     font-weight: bold;
+     width: 90px;
+     height: 90px;
+ }
+</style>
+<body>
+    <div class="container">
+        <div  class="gameBoard">
+            <div class="row"></div>
+                 <button class="btn" onclick="play(this)"></button>          
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+            <div class="row"></div>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+            <div class="row"></div>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+            <div class="row"></div>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+                 <button class="btn" onclick="play(this)"></button>
+</div>
+</div>
+<div class="controls">
+    <button class="reset" onclick="resetGame()">Reset</button>
+</div>
+</body>
+<script>
+    let turn = true;
+    let clickedCount=0;
+
+    function play(){
+        
+
+    }
+</script>
+</html>
+<!-- <script>
+    let turn = true;
+    let clickedCount=0;
+
+    function play(btn){
+        btn.innerText = turn ? "x" : "O"
+        btn.classList.add(turn ? "xbtn" : "obtn")
+        btn.setArrribute("disabled", "disabled")
+        turn = !turn
+        clickedCount++;
+
+
+        if(clickedCount==16){
+            alert("game is finished!!")
+        }
+    }
+    function resetGame(){
+        if (!confirm("do yuo")){
+            return
+        }
+        let btn = document.getElementsByClassName("btn")
+        for (const iterator of btns) {
+            iterator.innerText ="";
+            iterator.classList.remove("xbtn")
+            iterator.classList.remove("obtn")
+            iterator.removeAttribute("disabled")
+         }
+         turn = true;
+         clickedCount=0
+    }
+</script> -->
